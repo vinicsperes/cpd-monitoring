@@ -7,11 +7,11 @@ server.use(bodyParser.json());
 let ultimoDado = null;
 
 server.post('/dados', (req, res) => {
-  const { temperatura, umidade, gas } = req.body;
-  console.log('Dados recebidos:', { temperatura, umidade, gas });
+  const { temperature, humidity, mq2 } = req.body;
+  console.log('Dados recebidos:', { temperature, humidity, mq2 });
 
   // Armazene o último dado
-  ultimoDado = { temperatura, umidade, gas };
+  ultimoDado = { temperature, humidity, mq2 };
 
   res.status(200).send('Dados recebidos com sucesso.');
 });
