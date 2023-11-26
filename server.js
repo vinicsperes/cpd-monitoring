@@ -11,6 +11,10 @@ server.post('/dados', (req, res) => {
   res.status(200).send('Dados recebidos com sucesso.');
 });
 
+server.get('/mensagem', (req, res) => {
+    res.status(200).send('Esta é uma mensagem para a rota GET.');
+  });
+  
 server.listen(3000, () => {
   console.log(`Servidor rodando`);
 });
